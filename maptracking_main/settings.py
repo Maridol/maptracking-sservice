@@ -91,22 +91,34 @@ WSGI_APPLICATION = 'maptracking_main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+DATABASESx = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-DATABASESx = {
+
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd1rlipobrgit15',
-        'USER': 'aotkgcpcmtwhyy',
-        'PASSWORD': 'f22557b2cdcd01e4c8fb755277dd5d36055b3e141124798d02730c1c6e8f3777',
-        'HOST': 'ec2-50-17-203-195.compute-1.amazonaws.com',
+        'NAME': 'mydatabase',
+        'USER': 'mydatabaseuser',
+        'PASSWORD': 'mypassword',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
     }
 }
+
+#DATABASESx = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'd1rlipobrgit15',
+#        'USER': 'aotkgcpcmtwhyy',
+#        'PASSWORD': 'f22557b2cdcd01e4c8fb755277dd5d36055b3e141124798d02730c1c6e8f3777',
+#        'HOST': 'ec2-50-17-203-195.compute-1.amazonaws.com',
+#        'PORT': '5432',
+#    }
+#}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
